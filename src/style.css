@@ -7,6 +7,7 @@
 html,
 body,
 main,
+form,
 .app {
   height: 100%;
   width: 100%;
@@ -15,6 +16,9 @@ main,
   justify-content: center;
   gap: 1rem;
   color: #fff;
+}
+form {
+  height: auto;
 }
 input,
 input:hover,
@@ -35,10 +39,12 @@ button:focus {
   font-weight: 400;
   font-size: 0.8rem;
 }
-main {
+main,
+form {
   flex-direction: column;
 }
-main > div {
+main > div,
+form > div {
   padding: 0 1rem;
   width: 100%;
   max-width: 520px;
@@ -56,6 +62,17 @@ input {
 input:focus,
 input:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* input autofill style */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background: transparent;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 0 50px #ee8686 inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #fff;
 }
 
 button {
@@ -109,12 +126,17 @@ main {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  transition: opacity 200ms ease;
+}
+.atob.none {
+  opacity: 0;
+  pointer-events: none;
 }
 .atob button > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 200ms ease;
+  transition: opacity 300ms ease;
 }
 .atob button {
   position: relative;
