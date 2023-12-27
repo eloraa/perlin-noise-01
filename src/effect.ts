@@ -86,7 +86,6 @@ export class Effect {
 
     this.renderer.setSize(this.DOM.clientWidth, this.DOM.clientHeight);
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.autoClear = false;
     this.DOM.appendChild(this.renderer.domElement);
 
     this.camera = new OrthographicCamera(0, 0, 0, 0, 0, 0);

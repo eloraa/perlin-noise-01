@@ -2,13 +2,136 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
 html,
 body,
+main,
 .app {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  color: #fff;
+}
+input,
+input:hover,
+input:active,
+input:focus,
+button,
+button:hover,
+button:active,
+button:focus {
+  background: transparent;
+  outline: none;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+main {
+  flex-direction: column;
+}
+main > div {
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border 200ms ease;
+}
+input:focus,
+input:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 200ms ease;
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 200ms ease;
+}
+button:hover,
+button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0);
+  transform: scale(0.99);
+}
+
+main {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+
+::selection {
+  background-color: #efa5a5;
+  color: #000;
+}
+
+.blank {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0 1rem;
+}
+
+.atob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.atob button > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 200ms ease;
+}
+.atob button {
+  position: relative;
+  padding: 0.35rem;
+}
+
+.atob button > div:first-child {
+  position: absolute;
+  inset: 0;
+}
+
+.atob button .tick {
+  opacity: 0;
+}
+.atob button.copied .copy {
+  opacity: 0;
+}
+.atob button.copied .tick {
+  opacity: 1;
 }

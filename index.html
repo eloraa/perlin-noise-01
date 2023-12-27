@@ -5,9 +5,45 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atob | Elora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div class="app"></div>
+    <div class="app">
+      <main>
+        <h1 class="logo">
+          <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <path
+              d="M13.7932 0.954102L11.0632 7.87606C10.7143 8.76092 10.5398 9.20334 10.2726 9.57641C10.0357 9.90709 9.7462 10.1966 9.41552 10.4335C9.04245 10.7006 8.60003 10.8751 7.71517 11.2241L0.793213 13.9541L7.71517 16.6841C8.60003 17.0331 9.04245 17.2076 9.41552 17.4747C9.7462 17.7117 10.0357 18.0012 10.2726 18.3318C10.5398 18.7049 10.7143 19.1472 11.0632 20.0322L13.7932 26.9541L16.5232 20.0322C16.8722 19.1472 17.0467 18.7049 17.3138 18.3318C17.5508 18.0012 17.8403 17.7117 18.1709 17.4747C18.544 17.2076 18.9863 17.0331 19.8713 16.6841L26.7932 13.9541L19.8713 11.2241C18.9863 10.8751 18.544 10.7006 18.1709 10.4335C17.8403 10.1966 17.5508 9.90709 17.3138 9.57641C17.0467 9.20334 16.8722 8.76092 16.5232 7.87606L13.7932 0.954102Z"
+              fill="currentColor"
+            />
+          </svg>
+        </h1>
+        <div><input type="text" name="pass" /></div>
+        <div><button>Encode</button></div>
+
+        <div class="atob">
+          <p>0x62c949ec0d401c7cb9c0</p>
+
+          <button>
+            <div class="copy">
+              <svg viewBox="0 0 24 24" fill="none" width="24" height="24" role="presentation" focusable="false">
+                <path d="M7 4.5V17h12.5V4.5H7Zm11 11H8.5V6H18v9.5Z" fill="currentColor" vector-effect="non-scaling-stroke"></path>
+                <path d="M5.5 7.5H4V20h12.5v-1.5h-11v-11Z" fill="currentColor" vector-effect="non-scaling-stroke"></path>
+              </svg>
+            </div>
+            <div class="tick">
+              <svg viewBox="0 0 24 24" fill="none" width="24" height="24" role="presentation" focusable="false">
+                <path d="M5.5 11.5 10 16l8.25-8.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+        <p class="blank">I have lived in darkness For all my life, I've been pursued You'd be afraid if you could feel my pain And if you could see the things I am able to see</p>
+      </main>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
